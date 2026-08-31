@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>TemplatePlugin</title>
+    <style>
+        * { box-sizing: border-box; }
+    </style>
+    <!-- Only used when served unbundled (Debug dev server on localhost:4000).
+         The Release build's esbuild bundle inlines lit/three directly, so this is ignored then. -->
+    <script type="importmap">
+        {
+            "imports": {
+                "lit": "https://esm.sh/lit@3.3.3",
+                "three": "https://esm.sh/three@0.185.1",
+                "three/addons/": "https://esm.sh/three@0.185.1/examples/jsm/"
+            }
+        }
+    </script>
+    <script type="module" src="./app.bundle.js"></script>
+</head>
+    <body style="background-color: #1d1d1d">
+        <main-app></main-app>
+    </body>
+    <style>
+        html,
+        body {
+            overflow: hidden;
+            height: 100%;
+            margin: 0;
+            padding: 0;
+        }
+    </style>
+</html>
